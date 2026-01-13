@@ -59,6 +59,55 @@ print(banana)
 print(cherry)
 print(promogranate)
 print(kiwi)
+#looping in the tuple
+# using the for loop
+k=("apple", "banana", "cherry")
+for x in k:
+    print(x)
 
+ab=("apple", "banana", "cherry")
+for i in range(len((ab))):
+    print(ab[i])
+
+#using the zip() in for loop
+thistuple = ("apple", "banana", "cherry")
+price=("100","200","300")
+"""The zip() function takes multiple tuples and "zips" them together like a zipper, 
+pairing the first items together, then the second, and so on."""
+for thistuple,price in zip(thistuple,price):
+  print(f"the {thistuple} price is {price}")
+
+# use of range() & len() in loop helps print each items according to its indexes
+C=("apple", "banana", "cherry")
+for i in range(len(C)):
+    print(C[i])
+
+#use of for loop in tuples
+L = ("apple", "banana", "cherry")
+while i<len(L): #len()< the tuple 
+   print(L[i]) 
+   i = i + 1
+
+#joining of two tuples
+tuple3 = ("going","down","for","real")
+tuple4 = ("lets","do","some","awwesome","stuff") 
+tuple5 = tuple3 + tuple4 
+# adds tuple3 and tuple4
+tuple6 = tuple3*3 
+# multiples the tuple3 3 times 1 
+print(tuple4)
+print(tuple6)
+print(tuple5)
+
+#tuple methods
+#count -> Returns the number of times a specified value occurs in a tuple
+x=(1,2,3,4,2,5,2)
+y = x.count(2) #counts how many times apartaicular item is repeated in the tuple
+print(y)
+
+#index()
+h=("hello","world","hello","python","hello")
+z = h.index("python") #gives the index of the item thats in the bracket of index()
+print(z)
 
 
