@@ -1,3 +1,4 @@
+#creating a tuple and accessing its items
 tuple1 = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
 print(tuple1[1])
 print(tuple1[2:5]) #2 included and 5 not included
@@ -39,3 +40,25 @@ e= ("apple", "banana", "cherry")
 del e 
 
 # print(e) # this will raise an error because the tuple e no longer exists
+
+#packing and unpacking of tuples
+#packing 
+g = ("apple", "banana", "cherry","promogranate","kiwi")
+#unpacking  FEW ITEMS
+(apple,banana,cherry,*others) = g #if you want to unpack just a few use *others at the end
+print(apple)
+print(banana)
+print(cherry)
+ 
+ #unpacking all items 
+
+f = ("apple", "banana", "cherry","promogranate","kiwi")
+(apple,banana,cherry,promogranate,kiwi) = f #
+print(apple)
+print(banana)
+print(cherry)
+print(promogranate)
+print(kiwi)
+
+
+
