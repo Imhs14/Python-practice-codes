@@ -109,5 +109,3 @@ print(y)
 h=("hello","world","hello","python","hello")
 z = h.index("python") #gives the index of the item thats in the bracket of index()
 print(z)
-
-
