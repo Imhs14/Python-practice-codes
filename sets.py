@@ -138,3 +138,15 @@ print(sety)
 
 #use of symmertric_difference_update() method
 #method to keep the item that are not present in both sets
+sett = {"apple", "banana", "cherry"}
+set = {"google", "microsoft", "apple"}
+
+sett.symmetric_difference_update(sett)
+
+print(sett)
+{'google', 'banana', 'microsoft', 'cherry'}
+
+
+
+
+
