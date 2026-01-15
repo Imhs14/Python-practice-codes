@@ -144,9 +144,5 @@ set = {"google", "microsoft", "apple"}
 sett.symmetric_difference_update(sett)
 
 print(sett)
-{'google', 'banana', 'microsoft', 'cherry'}
 
-
-
-
-
+# o/p:{'google', 'banana', 'microsoft', 'cherry'}
