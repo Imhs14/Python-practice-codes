@@ -103,4 +103,15 @@ for x in mobile.keys():
 # using the items() return key and its values
 for x,y in mobile.items():
     print(x,y)
-
+h = {"brand" : "Oneplus", 
+           "model" : "Nord CE5",
+           "RAM" : 8,
+           "storage" : 128+64,
+           "color" : "Nexus Blue"
+           }
+# demonstrating the copy a dictionary
+apple = h.copy()
+print(apple)
+#  using dict() taking a variable and copying items from the 1 dictionary and making another with different name
+apple = dict(h)
+print(apple)
