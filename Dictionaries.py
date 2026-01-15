@@ -93,3 +93,14 @@ for x in mobile:
 # for printing the specific value from the dictionary
 for brand in mobile:
     print(mobile["brand"])
+
+    #using the values() returns all the values in a dictionary
+    for brand in mobile.values():
+        print(brand)
+# using the keys() returns the all the keys in the dictionary
+for x in mobile.keys():
+    print(x)
+# using the items() return key and its values
+for x,y in mobile.items():
+    print(x,y)
+
