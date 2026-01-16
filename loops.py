@@ -82,11 +82,18 @@ print("big is", big)
 # syntax Pattern : variable = value_if_true if condition else value_if_false
 
 #multiple conditions on the one line
-a = 8234
-b = 7432
-print("a") if a<b else print("=") if a == b else print("b") 
+s = 8234
+t = 7432
+print("s") if s<t else print("=") if s == t else print("t") 
 
 # you can do various stuff with multiple condotions on one line
 
 name = "heera"
 print("9") if len(name) == 9 else print("6") if len(name) == 6 else print("5 letters") if len(name) == 5 else print("no string")
+
+# ternary operators ## conditional operator a practical example of the ternary operator
+# helps to assign and return a value
+p = 40
+q = 80
+max = p if q<p else q 
+print("max val", max)
