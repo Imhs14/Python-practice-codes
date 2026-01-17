@@ -15,3 +15,11 @@ if a>b or b>a:
 #using the NOT
 if not b<a: # give false value so the block inside will be executed.
     print("a is not greater then b")
+
+#combinig the multiple operators
+#in this case we are using the and, or, not.
+age = 25
+is_student = False
+has_discount_code = True
+if (age<18 or age >65) and not is_student or has_discount_code:
+    print("discount applies")
