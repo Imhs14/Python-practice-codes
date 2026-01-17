@@ -19,3 +19,11 @@ if username and password and is_verified:
     print('login successful')
 else:
     print("invalid user or password")
+ 
+# Range checking with logical operator
+
+score = 21
+if score>=21 and score <=60:
+    print("you passed the exam")
+else :
+    print("you've failed the exam")
