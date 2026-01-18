@@ -45,10 +45,10 @@ match days:
 # using the if statement as Guard
 # we can add if statement as the extra condition-check
 
-month = input("enter the month:")
-weeks = input("enter the days you want to check:")
-match dayss:
+month = 9
+weeks = 3
+match weeks :
     case 1 | 2 | 3 | 4 if month <= 6 :
-        print("its the ")
+        print("its years 1st half's weeks ")
     case 1 | 2 | 3 | 4  if month >=7:
-        print("its the 2nd half") 
+        print("its the 2nd half's weeks") 
