@@ -27,12 +27,61 @@ def pets(animal, name ):
 pets( animal="dog", name="bhaw")
 pets( animal="cat", name="moew")
 
+# number of arguments 
+"""By default, a function must be called with the correct number of arguments.
+If your function expects 2 arguments, you must call it with exactly 2 arguments.
+"""
+def fun1(fname,lname):
+    print(fname+" ",lname)
+fun1("heera","shanker") # also known as positional arguments 
+fun1("shruthi","malathkar") # these are in positional to fname and lname.
+fun1("keerthi","malathkar")
+
+# default parameters values
+
+def func(fname = "unknown", lname = "friend"):
+    print("hello",fname, lname)
+func("heera","shanker")
+func("shruthi","malathkar")
+func() # this function will take default because no arguments were passed to it.
+
+#example no2
+def country( name = "india"):
+    print("I am from", name)
+country("sweden")
+country("uae")
+country() # this function call will take the default values.
+
 # positional arguments.
-def lol(subject, faculty):
+def lol(subject, faculty): # parameter could be of any number but separte them with a comma
     print(subject," is taught by",faculty)
     print(faculty, subject)
-lol("atcd", "buddy")
+lol("atcd", "buddy") # arguments
 lol("heera","phy") # this is called the positional arguments,
 # in this way you no need to specify the namme or faculty key and its items in functions
 
-# mixing the positional and keyword arguments
+# keyword arguments 
+# you can send the aruguments in this way -> key = value syntax
+def auto(car, horsepower):
+    print("My car is",car,"and its horsepower is",horsepower)
+auto(car = "buggatti", horsepower = 1600)
+auto(car = "rimac", horsepower = 1900)
+auto(car="rolls royce",horsepower=1000)
+auto(car="mclaren 720s",horsepower=720)
+
+# mixing positional and keyword arguments
+def func3(bikemodel, horsepower = 210, company = "BMW"):
+    print("bike model is", bikemodel,"its horsepower is",horsepower,"& it is from",company)
+func3("gsa 1250",horsepower= 250, company="BMW")
+func3("Tiger",800,"triumph")
+func3("panigale",horsepower=230,company="ducati")
+
+#passing different data types
+
+def func4(fruits):
+    for fruit in fruits:
+        print(fruit)
+my_fruits = ["apple","mango","pineapple",]
+your_fruits = ["watermelon","orange","kiwi","staberry"]
+func4(my_fruits)
+func4(your_fruits)
