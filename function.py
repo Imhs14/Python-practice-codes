@@ -85,3 +85,33 @@ my_fruits = ["apple","mango","pineapple",]
 your_fruits = ["watermelon","orange","kiwi","staberry"]
 func4(my_fruits)
 func4(your_fruits)
+
+# Returning the different data types
+def myfun():
+    return ["apple","mango","shake"]
+fruits = myfun()
+for x in fruits:
+    print(x)
+    # or
+print(fruits[0:3])
+
+# postional only arguments
+def bikes(name,/):
+    return f"hello {name}" # you can either use return in this way
+print(bikes("BMW"))
+# or
+def bikes1(name,/):
+    print("that's a",name) # you can use the print statement in this way
+bikes1("BMW")
+
+# Keyword only argument
+def cars(*, name):
+    return f"this is {name}"
+print(cars(name="buggatti"))
+print(cars(name="mercedes"))
+print(cars(name="Mustang"))
+
+# combining the positional and keyword only 
+def maths(a,/,*,b, c): #first you have to give positional-only then keyword-only or else it will through an error as / should be ahead of *. vice versa hota hai
+    return c- a+b          
+print(maths(10,b=20,c=5))
