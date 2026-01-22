@@ -14,3 +14,14 @@ def acc(*args):
     print("third argument:",args[2])
     print("all arguments:",args) # you can either write just args or use string slicer [0:3]. both works just fine
 acc("tony","stark","thor","captain")
+
+#using *args with regular arguments
+def cars(company,*models): 
+    for model in models:
+        print(company, model)
+cars("BMW","M5","M2","GT","i8") 
+""" o/p:BMW M5
+        BMW M2
+        BMW GT  """
+# as you can see that the company is printing for every model of company. bcs *args allows you to print number of arguments
+
