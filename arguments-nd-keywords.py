@@ -25,3 +25,24 @@ cars("BMW","M5","M2","GT","i8")
         BMW GT  """
 # as you can see that the company is printing for every model of company. bcs *args allows you to print number of arguments
 
+# practical example with *args
+def adding(*numbers):
+    total = 0 #initializing the total
+    for num in numbers: #loop for adding each number given as arguments
+        total += num # sum total = total + num
+    return total #always align return with the for keyword else it won't work properly
+print(adding(1, 2, 3, 4, 5))
+print(adding(9, 8, 7, 6, 5, 4))
+
+# finding the maximum number
+
+def max(*numbers):
+    if len(numbers) == 0:
+        return 0
+    max_num = numbers[0]
+    for num in numbers:
+        if num > max_num:
+            max_num = num
+    return max_num
+
+print(max(2,4,5,6,7,218,12))
