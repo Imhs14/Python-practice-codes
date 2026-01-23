@@ -95,5 +95,21 @@ keyword arguments {'release': 2024, 'horsepower': '240hp'} """
 def myfunc(a,b,c):
     return a + b + c
 numbers = [1,2,3] # this variable will used while calling the function
-result = myfunc(*numbers) # calling the above numbers using *numbers
+result = myfunc(*numbers) # calling the above numbers using *numbers, # Same as: my_function(1, 2, 3)
 print(result)
+
+# example 2
+def unpack(fname,mname, lname):
+    return fname + mname + lname
+name = ["heera ","shanker ","Malathkar"]
+result = unpack(*name) # before we gave 1 parameter and many arguments, but now we have given many parameters and 1 argument.
+print(result)
+# O/P: heera shanker Malathkar
+
+# using the ** kwargs
+def unpacking(ffname,llname):
+    print("Hello",ffname,llname)
+person = {"ffname":"emil","llname":"goffer"} # while doing this don't forget to add{} bcs we are adding different things which is only supported by the dictionary
+unpacking(**person) # Same as: my_function(fname="Emil", lname="Refsnes")
+
+
