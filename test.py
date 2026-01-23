@@ -1,5 +1,5 @@
-def my_function(greeting, *names):
-  for name in names:
-    print(greeting, name)
-
-my_function("Hello", "Emil", "Tobias", "Linus")
+def cars(company, **models):
+    print("The car brand is", company)
+    for key, value in models.items():
+        print(" ",key+" : ",value)
+cars("mclaren",model = "720s", horsepower = 720, color = "orange", price = "$650,000")
