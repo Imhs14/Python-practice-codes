@@ -53,6 +53,13 @@ def myfunc1():
 
 print(myfunc1())
 
+"""The LEGB Rule
+Python follows the LEGB rule when looking up variable names, and searches for them in this order:
+Local - Inside the current function
+Enclosing - Inside enclosing functions (from inner to outer)
+Global - At the top level of the module
+Built-in - In Python's built-in namespace"""
+
 x = "globel"
 def outer():
     x = "enclosing"
@@ -63,3 +70,8 @@ def outer():
     print("outer:", x)
 outer()
 print("globel:",x)
+
+""" O/P: inner: local
+outer: enclosing
+globel: globel """
+
