@@ -52,3 +52,14 @@ def myfunc1():
   return x
 
 print(myfunc1())
+
+x = "globel"
+def outer():
+    x = "enclosing"
+    def inner():
+        x = "local"
+        print("inner:",x)
+    inner()
+    print("outer:", x)
+outer()
+print("globel:",x)
