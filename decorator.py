@@ -40,3 +40,43 @@ def case(func):
 def funcc1(nam):
     return "hello" + nam
 print(funcc1(" heera"))
+
+# using the *args and **kwargs
+"""Sometimes the decorator function has no control over the arguments passed from decorated function,
+ to solve this problem, add (*args, **kwargs) to the wrapper function, 
+this way the wrapper function can accept any number, and any type of arguments,
+ and pass them to the decorated function."""
+
+def args(func):
+    def inner1(*args,**kwargs):
+        return func(*args,**kwargs).upper()
+    return inner1
+@args
+def decorator(name):
+    return "hello" + name
+print(decorator(" tony stark", age = 45))
+
+# example 
+
+def my_decorator(func):
+    # This wrapper can now accept anything you throw at it
+    def wrapper(*args, **kwargs): 
+        print("Logging: Function is about to run...")
+        
+        # We unpack the arguments back into the original function
+        result = func(*args, **kwargs) 
+        
+        print("Logging: Function finished.")
+        return result
+    return wrapper
+
+@my_decorator
+def add_numbers(a, b):
+    return a + b
+
+# This works perfectly now!
+print(add_numbers(5, 10))
+
+# Decorator with Arguments
+# decorator can accept their own arguments by adding another wrapper level
+
