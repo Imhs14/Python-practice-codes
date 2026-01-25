@@ -54,7 +54,7 @@ def args(func):
 @args
 def decorator(name):
     return "hello" + name
-print(decorator(" tony stark", age = 45))
+print(decorator(" tony stark"))
 
 # example 
 
@@ -80,3 +80,18 @@ print(add_numbers(5, 10))
 # Decorator with Arguments
 # decorator can accept their own arguments by adding another wrapper level
 
+def decorator(func):
+    def wrapper(*args, **kwargs):
+        print("good Morning")
+        result = func(*args, **kwargs)
+        print(result)
+        print("thanks for using this code")
+    return wrapper
+@decorator
+def func1(x):
+    return "hello"+ x
+func1("heera")
+# good morning and thanks for using is what decorator does nd is mostly used for such type of codes
+"""good Morning
+helloheera
+thanks for using this code"""
