@@ -244,5 +244,3 @@ def mmyfunc():
     return "hello"
 print(mmyfunc.__name__)
 print(mmyfunc.__doc__)
-
-
