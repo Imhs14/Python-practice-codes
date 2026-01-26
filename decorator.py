@@ -31,6 +31,9 @@ def func2():
     return "hi what is your name"
 print(func2())
 
+
+
+
 # Arguments in the decorator Function
 def case(func):
     def innerr(x):
@@ -40,6 +43,9 @@ def case(func):
 def funcc1(nam):
     return "hello" + nam
 print(funcc1(" heera"))
+
+
+
 
 # using the *args and **kwargs
 """Sometimes the decorator function has no control over the arguments passed from decorated function,
@@ -77,6 +83,8 @@ def add_numbers(a, b):
 # This works perfectly now!
 print(add_numbers(5, 10))
 
+
+
 # Decorator with Arguments
 # decorator can accept their own arguments by adding another wrapper level
 
@@ -91,10 +99,15 @@ def decorator(func):
 def func1(x):
     return "hello" + x
 func1(" heera")
+
 # good morning and thanks for using is what decorator does nd is mostly used for such type of codes
 """good Morning
 helloheera
 thanks for using this code"""
+
+
+
+
 def decorator(func):
     def wrapper(*args, **kwargs):
         print("Good Morning")
@@ -113,6 +126,9 @@ def func1(name, info):
 
 func1("heera", {"age": 56})
 
+
+
+
 # decorator with argument
 
 def changecase1(n):
@@ -129,6 +145,7 @@ def changecase1(n):
 def myfunc():
     return "hello heera"
 print(myfunc())
+
 
 # Example 
 
@@ -151,6 +168,9 @@ def sped():
     return "iam speed"
 print(sped())
 
+
+
+
 # using multiple decorator on top of one function
 
 def dec0(n):
@@ -170,8 +190,59 @@ def dec01(func):
     def inn1():
         return func().upper()
     return inn1
-@dec0(2)
-@dec01
+@dec0(2) # giving n's inputs here
+@dec01 # calling the next decorator function
 def funcc():
     return " Heera "
 print(funcc())
+
+
+
+
+# Preserving Function Metadata
+
+"""Data: What the function returns (e.g., "Have a great day!").
+Metadata: The function's name (__name__), the file it lives in, 
+or the description you wrote for it (__doc__)."""
+
+def myfnc():
+    """ This Function returns a Friendly greeting """
+    return "have a great day!"
+print(myfnc.__name__)
+print(myfnc.__doc__)
+print(myfnc())
+
+""" myfnc
+This Function returns a Friendly greeting 
+have a great day! """
+
+#But, when a function is decorated, the metadata of the original function is lost.
+# Try returning the name from a decorated function and you will not get the same result:
+
+def mfx(func):
+    def infx():
+        return func().upper()
+    return infx
+@mfx
+def func3():
+    return "hello"
+print(func3.__name__)
+# O/P : infx , here instead of func3 we are getting infx 
+# the func3 is lost
+
+# so to fix this problem we have functool.wraps
+# this import functools.wraps will preserve the original function name and docstring
+import functools
+def cchangecase(func):
+    @functools.wraps(func)
+    def mmyinner():
+        return func().upper()
+    return mmyinner
+@cchangecase
+def mmyfunc():
+    """this is mmyfunc saying hello""" # so if you want __doc__ to print the comment use """ these""" else vth # it dsn't work
+    return "hello"
+print(mmyfunc.__name__)
+print(mmyfunc.__doc__)
+
+

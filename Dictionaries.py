@@ -71,6 +71,9 @@ mobile = {"brand" : "Oneplus",
            "color" : "Nexus Blue"
            }
 print(mobile)
+
+
+
 # demonstration of del & clear() item
 del mobile["color"]
 print(mobile)
@@ -83,17 +86,23 @@ icecream = {"brand" : "Amul",
 
 icecream.clear()
 print(icecream)
+
+
+
 # using del to delete the dictionary
 del icecream
+
+
 
 #Loops in the dictionaries
 
 for x in mobile:
     print(x)
+
 # for printing the specific value from the dictionary
 for brand in mobile:
     print(mobile["brand"])
-
+    
     #using the values() returns all the values in a dictionary
     for brand in mobile.values():
         print(brand)
