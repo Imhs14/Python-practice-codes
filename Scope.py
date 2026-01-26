@@ -74,4 +74,3 @@ print("globel:",x)
 """ O/P: inner: local
 outer: enclosing
 globel: globel """
-

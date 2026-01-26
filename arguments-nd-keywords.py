@@ -1,5 +1,5 @@
 # Arbitrary Arguments *args
-def fam(*kids):
+def fam(*kids): 
     print("the youngest child is",kids[0])
 
 fam("bob","danny","tony","thor") #out of these 4 the specified kids[0] will be printed according to the postion
@@ -113,3 +113,5 @@ person = {"ffname":"emil","llname":"goffer"} # while doing this don't forget to 
 unpacking(**person) # Same as: my_function(fname="Emil", lname="Refsnes")
 
 
+# *args saves items as tuples 
+# **kwargs saves items as dictionary
