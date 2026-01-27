@@ -7,3 +7,13 @@ print(x(5))
 # giving 2 arguments 
 v = lambda a,b : a+b
 print(v(5,6))
+ 
+ # using 3 arguments 
+y = lambda a, b, c : a*b+c
+print(y(4, 5, 3))
+
+def myfunc(n):
+    return lambda a: a*n
+
+result = myfunc(2) # this goes to the function n
+print(result(11)) # this goes to the lambda function a
