@@ -18,10 +18,10 @@ A recursive case - The function calling itself with a modified argument
 Without a base case, the function would call itself forever, causing a stack overflow error."""
 
 def factorial(n):
-    if n == 0 or n ==1:
+    if n == 0 or n == 1:
         return 1
     else:
-        return n* factorial(n-1)
+        return n * factorial(n - 1)
 print(factorial(5))  
 
 # Fibonacci sequence using recursions
@@ -52,7 +52,7 @@ def findmax(num):
        maxrst = findmax(num[1:])
        return num[0] if num[0] > maxrst else maxrst
 
-mylist = [1223,45,78,89,56,78,55,88,44,67,445]  
+mylist = [1223,45,78,89,56,78,55,88,44,6789,445]  
 print(findmax(mylist))
 
 # Recursion in depth 
