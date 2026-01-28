@@ -17,3 +17,8 @@ def myfunc(n):
 
 result = myfunc(2) # this goes to the function n
 print(result(11)) # this goes to the lambda function a
+
+# by using the sorted to sort a list's items
+words = ["apple","banana","Mexico", "daytona"]
+result = sorted(words, key = lambda x : len(x))
+print (result)
