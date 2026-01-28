@@ -32,4 +32,16 @@ def fibo(n):
     else:
         return fibo(n - 1) + fibo(n - 2)
 print(fibo(7))      
-#O/P: 13              
+#O/P: 13  
+
+
+# using recursions to add all the elements of a list 
+def sumlist(num):
+    if len(num) == 0:
+        return 0
+    else:
+        return num[0]  + sumlist(num[1:])
+mylist =[13,43,532,532,5533,887,642,632]    
+print(sumlist(mylist))    
+
+          
