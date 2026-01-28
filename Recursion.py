@@ -44,4 +44,13 @@ def sumlist(num):
 mylist =[13,43,532,532,5533,887,642,632]    
 print(sumlist(mylist))    
 
-          
+# Finding maximum value in a list
+def findmax(num):
+   if len(num) == 1:
+       return num[0]
+   else:
+       maxrst = findmax(num[1:])
+       return num[0] if num[0] > maxrst else maxrst
+
+mylist = [1223,45,78,89,56,78,55,88,44,67,445]  
+print(findmax(mylist))
