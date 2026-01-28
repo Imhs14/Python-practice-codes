@@ -54,3 +54,20 @@ def findmax(num):
 
 mylist = [1223,45,78,89,56,78,55,88,44,67,445]  
 print(findmax(mylist))
+
+# Recursion in depth 
+# python has the limit how deep recursion can go usually it is 1000 recursive calls
+# checking the recursive limit
+
+import sys
+print(sys.getrecursionlimit())
+
+#O/P : 1000
+
+# you can set higher recursion limits but be careful as this can cause crashes:
+import sys
+sys.setrecursionlimit(2000)
+print(sys.getrecursionlimit())
+
+#O/P : 2000
+

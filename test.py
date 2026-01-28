@@ -1,43 +1,8 @@
-def case(n):
-    def dec(func):
-        def inn():
-            if n == 1:
-                return func().upper()
-            else:
-                return func().lower()
-        return inn
-    return dec
-@case(1)
-def ssup():
-    return "hiiiii"
-print(ssup())
-
-@case(2)
-def sped():
-    return "iam speed"
-print(sped())
-
-# using multiple decorator on top of one function
-
-def dec0(n):
-    def dec1(func):
-        def inner(*args,**kwargs):
-            if n == 1:
-                return "Hello" + func(*args,**kwargs) + "have a great day"
-            elif n == 2:
-                return "Hello" + func(*args,**kwargs) + "have good evening"
-            else:
-                return "Hello" + func(*args, **kwargs) + "have a great night"
-        return inner
-    return dec1
-
-
-def dec01(func):
-    def inn1():
-        return func().upper()
-    return inn1
-@dec0(2)
-@dec01
-def funcc():
-    return " Heera "
-print(funcc())
+def fdmx(num):
+    if len(num) == 1:
+        return num[0]
+    else:
+        mxrst = fdmx(num[1:])
+        return num[0] if num[0] > mxrst else  mxrst
+lst = [1,3,4,5,6,6,7,6,3,2,2,3,2323,5,23,2,4,24,24,2,2,5,235,235,234,24]
+print(fdmx(lst))
