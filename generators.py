@@ -24,3 +24,19 @@ def count_up_to(n):
         count += 1
 for num in count_up_to(5):
     print(num)
+# the output is returned from 1-5 vertically
+
+# unlike the return which terminates the function, yeild pauses the function and continues the execution when called multiple times
+
+# Generators Saves Memory
+# generator are memory efficient because they generator values on fly instead of storing everything in memory
+# for large datasets it saves the memory
+def large_seq(n):
+    for i in range(n):
+        yield i
+# this does't create a million numbers in memory
+gen = large_seq(1000000)
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
