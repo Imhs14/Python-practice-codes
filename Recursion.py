@@ -71,3 +71,5 @@ print(sys.getrecursionlimit())
 
 #O/P : 2000
 
+# Increasing the recursion limit should be done with caution. 
+# For very deep recursion, consider using iteration instead.
